@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Dusk</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #060a12;
+      color: rgba(255,255,255,0.85);
+      padding: 60px 24px 80px;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 48px;
+      transition: color 0.2s;
+    }
+    .back:hover { color: rgba(255,255,255,0.8); }
+
+    .mark {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      margin: 40px 0 12px;
+    }
+
+    p { font-size: 15px; color: rgba(255,255,255,0.65); }
+
+    .faq {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    details {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    summary {
+      padding: 16px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      font-size: 20px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.3);
+      transition: transform 0.2s;
+    }
+    details[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .answer {
+      padding: 0 20px 18px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.65;
+    }
+
+    .contact-card {
+      margin-top: 48px;
+      background: rgba(45, 212, 191, 0.07);
+      border: 1px solid rgba(45, 212, 191, 0.18);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      margin-bottom: 24px;
+    }
+
+    a.btn {
+      display: inline-block;
+      padding: 13px 32px;
+      background: #2DD4BF;
+      color: #060a12;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    a.btn:hover { opacity: 0.85; }
+
+    a { color: #2DD4BF; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <a class="back" href="index.html">&#8592; Dusk</a>
+
+    <div class="mark">✦</div>
+    <h1>Support</h1>
+    <p class="subtitle">We're here to help.</p>
+
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+
+      <details>
+        <summary>Why isn't my sleep data showing?</summary>
+        <div class="answer">
+          Dusk reads sleep data from Apple Health. Make sure your sleep tracking app (or Apple's own Sleep app) is writing data to Health, and that you've granted Dusk permission to read sleep data. Go to <strong>Settings → Privacy & Security → Health → Dusk</strong> and enable all sleep categories.
+        </div>
+      </details>
+
+      <details>
+        <summary>Why aren't my steps showing?</summary>
+        <div class="answer">
+          Steps are pulled from Apple Health. Ensure your iPhone or Apple Watch is writing step data to Health, and that Dusk has permission to read it. Go to <strong>Settings → Privacy & Security → Health → Dusk</strong> and enable Steps and Walking + Running Distance.
+        </div>
+      </details>
+
+      <details>
+        <summary>Why aren't my calendar events appearing?</summary>
+        <div class="answer">
+          Dusk needs Calendar access to show your day's events. Go to <strong>Settings → Privacy & Security → Calendars → Dusk</strong> and set it to Full Access.
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I restore my purchase?</summary>
+        <div class="answer">
+          Open Dusk, go to Settings, and tap <strong>Restore purchases</strong> at the bottom of the Premium section. Make sure you're signed into the same Apple ID you used to purchase.
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I cancel my subscription?</summary>
+        <div class="answer">
+          Subscriptions are managed by Apple. Go to <strong>Settings → [your name] → Subscriptions</strong> on your iPhone to cancel or manage your Dusk subscription.
+        </div>
+      </details>
+
+      <details>
+        <summary>Does Dusk send my data anywhere?</summary>
+        <div class="answer">
+          No. All data is processed on your device and never uploaded to a server. See our <a href="privacy.html">Privacy Policy</a> for full details.
+        </div>
+      </details>
+
+      <details>
+        <summary>Will Dusk work without granting all permissions?</summary>
+        <div class="answer">
+          Dusk works with whatever permissions you grant, but some cards may show empty or limited data. For the best experience, allow access to Health, Calendar, and Location.
+        </div>
+      </details>
+
+    </div>
+
+    <div class="contact-card">
+      <h2>Still need help?</h2>
+      <p>Send us an email and we'll get back to you as soon as possible.</p>
+      <a class="btn" href="mailto:hi@dusk.app">Email support</a>
+    </div>
+
+  </div>
+</body>
+</html>
